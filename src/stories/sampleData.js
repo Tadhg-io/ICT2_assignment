@@ -1,5 +1,5 @@
 
-export default {
+export const SampleMovie = {
     adult: false,
     backdrop_path: "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
     belongs_to_collection: {
@@ -80,3 +80,24 @@ export default {
     vote_count: 9692,
   };
   
+
+  export const SampleTvShow = {
+    backdrop_path: "/bZGAX8oMDm3Mo5i0ZPKh9G2OcaO.jpg",
+    first_air_date: "2021-06-09",
+    genre_ids: [
+      18,
+      10765
+    ],
+    id: 84958,
+    name: "Loki",
+    origin_country: [
+      "US"
+    ],
+    original_language: "en",
+    original_name: "Loki",
+    overview: "After stealing the Tesseract during the events of “Avengers: Endgame,” an alternate version of Loki is brought to the mysterious Time Variance Authority, a bureaucratic organization that exists outside of time and space and monitors the timeline. They give Loki a choice: face being erased from existence due to being a “time variant” or help fix the timeline and stop a greater threat.",
+    popularity: 2366.602,
+    poster_path: "/kEl2t3OhXc3Zb9FBh1AuYzRTgZp.jpg",
+    vote_average: 8.2,
+    vote_count: 6892
+  }
