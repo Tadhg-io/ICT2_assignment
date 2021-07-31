@@ -41,6 +41,7 @@ function MovieListPageTemplate({ movies, title, action }) {
             onUserInput={handleChange}
             titleFilter={nameFilter}
             genreFilter={genreFilter}
+            prompt="Filter the Movies"
           />
         </Grid>
           <MovieList action={action} movies={displayedMovies}></MovieList>

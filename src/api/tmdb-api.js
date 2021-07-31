@@ -66,7 +66,7 @@
     return response.json();
   };
 
-  export const getLatestTvShows = async () => {
+  export const getPopularTvShows = async () => {
     const response = await fetch(
       `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&include_video=false&page=1`
     );
