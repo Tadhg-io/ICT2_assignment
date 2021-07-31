@@ -5,6 +5,7 @@ import PageTemplate from "../components/templateTvShowPage";
 import { getTvShow } from '../api/tmdb-api';
 import { useQuery } from "react-query";
 import Spinner from '../components/spinner';
+import SeasonList from "../components/seasonList";
 
 const MovieDetailsPage = (props) => {
   const { id } = props.match.params
@@ -28,6 +29,7 @@ const MovieDetailsPage = (props) => {
         <>
           <PageTemplate tvShow={tvShow}>
             <TvShowDetails tvShow={tvShow} />
+            <SeasonList numberOfSeasons={tvShow.number_of_seasons} />
           </PageTemplate>
         </>
       ) : (
