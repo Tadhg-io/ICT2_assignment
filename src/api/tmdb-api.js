@@ -44,6 +44,18 @@
     }
     return response.json();
   };
+  
+  export const getTvShowImages = async ({queryKey}) => {
+    // eslint-disable-next-line no-unused-vars
+    const [prefix, { id }] = queryKey;
+    const response = await fetch(
+      `https://api.themoviedb.org/3/tv/${id}/images?api_key=${process.env.REACT_APP_TMDB_KEY}`
+    )
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
+  };
 
   export const getMovieReviews = (id) => {
     return fetch(
@@ -69,6 +81,33 @@
   export const getPopularTvShows = async () => {
     const response = await fetch(
       `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&include_adult=false&include_video=false&page=1`
+    );
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
+  };
+
+  
+  export const getTvShow = async ( args ) => {
+    // console.log(args)
+    // eslint-disable-next-line no-unused-vars
+    const [prefix, { id }] = args.queryKey;
+    const response = await fetch(
+      `https://api.themoviedb.org/3/tv/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+    );
+    if (!response.ok) {
+      throw new Error(response.json().message);
+    }
+    return response.json();
+  };
+
+  
+  export const getTvSeason = async ( args ) => {
+    // eslint-disable-next-line no-unused-vars
+    const [prefix, { id, number }] = args.queryKey;
+    const response = await fetch(
+      `https://api.themoviedb.org/3/tv/${id}/season/${number}?api_key=${process.env.REACT_APP_TMDB_KEY}`
     );
     if (!response.ok) {
       throw new Error(response.json().message);
