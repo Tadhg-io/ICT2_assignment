@@ -20,14 +20,20 @@ export default function SeasonList({ numberOfSeasons }) {
     const classes = useStyles();
     const [selectedIndex, setSelectedIndex] = React.useState(1);
 
+    // select the list items when clicked
     const handleListItemClick = (event, index) => {
         setSelectedIndex(index);
     };
 
-    let seasonListItems = [];
+    //-- Render a list Item for every season --//
 
+    // new array to store ejs objects
+    let seasonListItems = [];
+    // loop from 1 to number of Seasons
     for(let n = 1; n <= numberOfSeasons; n++){
+        // Define the label to diisplay for this Season
         let label = `Season ${n}`;
+        // Add the code to the Array
         seasonListItems.push(<>
             <ListItem
                 button
@@ -40,6 +46,7 @@ export default function SeasonList({ numberOfSeasons }) {
         </>)
     }       
 
+    // return a div with all list items
     return (
         <div className={classes.root}>
             {seasonListItems.map((e) => (e))}

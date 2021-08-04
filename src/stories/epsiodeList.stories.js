@@ -1,6 +1,6 @@
 import React from "react";
-import MovieList from "../components/movieList";
-import { SampleMovie } from "./sampleData";
+import EpisodeList from "../components/episodeList";
+import { SampleEpisode } from "./sampleData";
 import { MemoryRouter } from "react-router";
 import { action } from "@storybook/addon-actions";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
@@ -8,8 +8,8 @@ import Grid from "@material-ui/core/Grid";
 import MoviesContextProvider from "../contexts/moviesContext";
 
 export default {
-  title: "Home Page/MovieList",
-  component: MovieList,
+  title: "Home Page/EpisodeList",
+  component: EpisodeList,
   decorators: [
     (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
     (Story) => <MoviesContextProvider>{Story()}</MoviesContextProvider>,
@@ -17,17 +17,17 @@ export default {
 };
 
 export const Basic = () => {
-  const movies = [
-    { ...SampleMovie, id: 1 },
-    { ...SampleMovie, id: 2 },
-    { ...SampleMovie, id: 3 },
-    { ...SampleMovie, id: 4 },
-    { ...SampleMovie, id: 5 },
+  const episodes = [
+    { ...SampleEpisode, id: 1 },
+    { ...SampleEpisode, id: 2 },
+    { ...SampleEpisode, id: 3 },
+    { ...SampleEpisode, id: 4 },
+    { ...SampleEpisode, id: 5 },
   ];
   return (
     <Grid container spacing={5}>
-      <MovieList
-        movies={movies}
+      <EpisodeList
+        episodes={episodes}
         action={(movie) => <AddToFavoritesIcon movie={movie} />}
       />
     </Grid>
