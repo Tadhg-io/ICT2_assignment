@@ -1,11 +1,13 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import List from '@material-ui/core/List';
+import Link from '@material-ui/core/Link';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import { makeStyles } from "@material-ui/core/styles";
+import { useParams } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,13 +19,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SeasonList({ numberOfSeasons }) {
     
-    const classes = useStyles();
-    const [selectedIndex, setSelectedIndex] = React.useState(1);
+    let { id, number } = useParams();
 
-    // select the list items when clicked
-    const handleListItemClick = (event, index) => {
-        setSelectedIndex(index);
-    };
+    const classes = useStyles();
 
     //-- Render a list Item for every season --//
 
@@ -33,17 +31,18 @@ export default function SeasonList({ numberOfSeasons }) {
     for(let n = 1; n <= numberOfSeasons; n++){
         // Define the label to diisplay for this Season
         let label = `Season ${n}`;
+        // build the URL
+        let url = `/shows/${id}/${n}`
         // Add the code to the Array
-        seasonListItems.push(<>
+        seasonListItems.push(<Link href={url}>
             <ListItem
                 button
-                selected={selectedIndex === n}
-                onClick={(event) => handleListItemClick(event, n)}
+                selected={number == n}
             >
-                <ListItemText primary={label} />
+            <ListItemText primary={label} />
             </ListItem>
             <Divider />
-        </>)
+        </Link>)
     }       
 
     // return a div with all list items

@@ -37,6 +37,7 @@ const App = () => {
               <Route exact path="/shows/popular" component={PopularShowsPage} />
               <Route path="/reviews/:id" component={MovieReviewPage} />
               <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+              <Route path="/shows/:id/:number" component={TvShowPage} />
               <Route path="/shows/:id" component={TvShowPage} />
               <Route path="/movies/:id" component={MoviePage} />
               <Route exact path="/" component={HomePage} />

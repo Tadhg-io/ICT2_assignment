@@ -64,7 +64,7 @@ const TvShowDetails = ({ tvShow }) => {  // Don't miss this!
   </Paper>
   <Paper component="ul" className={classes.root}>
     <li>
-      <Chip label="Production Countries" className={classes.chip} color="primary" />
+      <Chip label="Production Companies" className={classes.chip} color="primary" />
     </li>
     {tvShow.production_companies.map((g) => (
       <li key={g.name}>
