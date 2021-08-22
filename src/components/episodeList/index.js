@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles, withStyles} from '@material-ui/core/styles';
-import Episode from "../episodeCard";
 import Grid from "@material-ui/core/Grid";
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';

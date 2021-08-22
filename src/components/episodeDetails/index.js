@@ -32,11 +32,11 @@ const useStyles = makeStyles((theme) => ({
 
 const EpisodeDetails = ({ episode }) => {  // Don't miss this!
   const classes = useStyles();
-  const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
     <>
 
+      {/* Episode Rating */}
       <Paper component="ul" className={classes.root}>
         <Chip
           icon={<StarRate />}
@@ -44,10 +44,10 @@ const EpisodeDetails = ({ episode }) => {  // Don't miss this!
         />
       </Paper>
 
+      {/* Episode Overview */}
       <Typography variant="h5" component="h3">
         Overview
       </Typography>
-
       <Typography variant="h6" component="p">
         {episode.overview}
       </Typography>
