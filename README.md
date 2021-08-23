@@ -2976,5 +2976,6 @@ To use this app, register an API key at TMDB () and place the key in a .env file
 
 ## Independent learning.
 
-In this project I learned about tables in Material UI
+In this project I learned about tables and lists in Material UI
 - https://material-ui.com/components/tables/
+- https://material-ui.com/components/lists/
