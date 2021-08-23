@@ -18,12 +18,10 @@ To use this app, register an API key at TMDB () and place the key in a .env file
 
 ## API Data Model.
 
-......[For the Movies Fan app] Specify the additional TMDB endpoints used and show sample responses, in JSON .........
-
- + Tv Shows
-Endpoint:
-    https://api.themoviedb.org/3/tv/{tv_id}
-Sample Response:
+- Tv Shows
+    - Endpoint:
+        - https://api.themoviedb.org/3/tv/{tv_id}
+    - Sample Response:
         ```
         {
             "backdrop_path": "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
@@ -237,11 +235,10 @@ Sample Response:
             "vote_count": 11504
             }
             ```
-
- + Seasons
-    Endpoint:
-        https://api.themoviedb.org/3/tv/{tv_id}/season/{season_number}
-    Sample Reponse:
+- Season
+    - Endpoint:
+        - https://api.themoviedb.org/3/tv/{tv_id}/season/{season_number}
+    - Sample Reponse:
         ```
         {
             "_id": "5327272d9251411f85009530",
@@ -2706,38 +2703,278 @@ Sample Response:
             "season_number": 1
         }
         ```
+- Episode
+    - Endpoint:
+        - https://api.themoviedb.org/3/tv/{tv_id}/season/{season_number}/episode/{episode_number}
+    - Sample Repsonse:
+    ```
+    {
+        air_date: "2013-12-02",
+        crew: [
+            {
+            job: "Writer",
+            department: "Writing",
+            credit_id: "5b564d119251416dd102384d",
+            adult: false,
+            gender: 2,
+            id: 57194,
+            known_for_department: "Writing",
+            name: "Dan Harmon",
+            original_name: "Dan Harmon",
+            popularity: 1.368,
+            profile_path: "/aGGlW2R9VD6DNzzAXFsZGLcJaDl.jpg"
+            },
+            {
+            job: "Producer",
+            department: "Production",
+            credit_id: "5bccb07c0e0a26015f00d975",
+            adult: false,
+            gender: 0,
+            id: 1257756,
+            known_for_department: "Production",
+            name: "Kenny Micka",
+            original_name: "Kenny Micka",
+            popularity: 0.6,
+            profile_path: null
+            },
+            {
+            job: "Writer",
+            department: "Writing",
+            credit_id: "5bccb0b6925141613800bccc",
+            adult: false,
+            gender: 2,
+            id: 1245733,
+            known_for_department: "Acting",
+            name: "Justin Roiland",
+            original_name: "Justin Roiland",
+            popularity: 7.924,
+            profile_path: "/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg"
+            },
+            {
+            job: "Director",
+            department: "Directing",
+            credit_id: "5bccb0c40e0a26015b00cf7c",
+            adult: false,
+            gender: 2,
+            id: 1245733,
+            known_for_department: "Acting",
+            name: "Justin Roiland",
+            original_name: "Justin Roiland",
+            popularity: 7.924,
+            profile_path: "/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg"
+            },
+            {
+            job: "Editor",
+            department: "Editing",
+            credit_id: "5bccba740e0a26016400dfe4",
+            adult: false,
+            gender: 0,
+            id: 1626416,
+            known_for_department: "Acting",
+            name: "Ruthie Aslan",
+            original_name: "Ruthie Aslan",
+            popularity: 0.6,
+            profile_path: null
+            },
+            {
+            job: "Editor",
+            department: "Editing",
+            credit_id: "5bccbaa9c3a368285e00df4c",
+            adult: false,
+            gender: 2,
+            id: 1245733,
+            known_for_department: "Acting",
+            name: "Justin Roiland",
+            original_name: "Justin Roiland",
+            popularity: 7.924,
+            profile_path: "/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg"
+            },
+            {
+            job: "Editor",
+            department: "Editing",
+            credit_id: "5bccbabf0e0a26016e00e8d5",
+            adult: false,
+            gender: 2,
+            id: 2156860,
+            known_for_department: "Editing",
+            name: "Steve Ingram",
+            original_name: "Steve Ingram",
+            popularity: 0.6,
+            profile_path: null
+            },
+            {
+            job: "Production Design",
+            department: "Art",
+            credit_id: "5bccbb2f0e0a26016e00e9e3",
+            adult: false,
+            gender: 0,
+            id: 1947343,
+            known_for_department: "Art",
+            name: "Jenny Goldberg",
+            original_name: "Jenny Goldberg",
+            popularity: 0.6,
+            profile_path: null
+            },
+            {
+            job: "Production Manager",
+            department: "Production",
+            credit_id: "5bccbbb10e0a26016200e9a4",
+            adult: false,
+            gender: 0,
+            id: 1815508,
+            known_for_department: "Production",
+            name: "Eric Orner",
+            original_name: "Eric Orner",
+            popularity: 0.6,
+            profile_path: null
+            },
+            {
+            job: "Production Coordinator",
+            department: "Production",
+            credit_id: "5bccbc170e0a26016b00e5ee",
+            adult: false,
+            gender: 0,
+            id: 1645400,
+            known_for_department: "Production",
+            name: "Sean Reed",
+            original_name: "Sean Reed",
+            popularity: 0.608,
+            profile_path: null
+            }
+        ],
+        episode_number: 1,
+        guest_stars: [
+            {
+            character: "Frank Palicky / Tom (voice)",
+            credit_id: "5bccb5db925141612600c659",
+            order: 19,
+            adult: false,
+            gender: 0,
+            id: 1365425,
+            known_for_department: "Acting",
+            name: "Ryan Ridley",
+            original_name: "Ryan Ridley",
+            popularity: 2.171,
+            profile_path: "/mSFssRpQl6ax2QrYTxBBfluVgy2.jpg"
+            },
+            {
+            character: "Davin / Red Alien / Gromflomite Guard (voice)",
+            credit_id: "5bccba14c3a368286d00f2c0",
+            order: 21,
+            adult: false,
+            gender: 2,
+            id: 57194,
+            known_for_department: "Writing",
+            name: "Dan Harmon",
+            original_name: "Dan Harmon",
+            popularity: 1.368,
+            profile_path: "/aGGlW2R9VD6DNzzAXFsZGLcJaDl.jpg"
+            },
+            {
+            character: "Jessica / Rick's Computer / Customs Announcement (voice)",
+            credit_id: "5bccb5e7c3a368285e00d686",
+            order: 61,
+            adult: false,
+            gender: 1,
+            id: 116315,
+            known_for_department: "Acting",
+            name: "Kari Wahlgren",
+            original_name: "Kari Wahlgren",
+            popularity: 3.66,
+            profile_path: "/9phhl0oubAKt8D50xLGAb81KPSb.jpg"
+            },
+            {
+            character: "Greebybobe / Green Alien / Blob Alien (voice)",
+            credit_id: "5e941243ccb15f061c6f8edb",
+            order: 71,
+            adult: false,
+            gender: 2,
+            id: 1245733,
+            known_for_department: "Acting",
+            name: "Justin Roiland",
+            original_name: "Justin Roiland",
+            popularity: 7.924,
+            profile_path: "/wYApP38aXe6ZcEtlBAfNRxJTQQi.jpg"
+            },
+            {
+            character: "Customs Gromflomite / Glen the Gromflomite (voice)",
+            credit_id: "5e9412648e87020013cda782",
+            order: 72,
+            adult: false,
+            gender: 2,
+            id: 89599,
+            known_for_department: "Acting",
+            name: "Eric Bauza",
+            original_name: "Eric Bauza",
+            popularity: 2.99,
+            profile_path: "/afOlsVPQxbtkom604MeCemjlwEV.jpg"
+            },
+            {
+            character: "Principal Vagina (voice)",
+            credit_id: "5bccb5c8925141613e00c5e3",
+            order: 170,
+            adult: false,
+            gender: 2,
+            id: 181234,
+            known_for_department: "Acting",
+            name: "Phil Hendrie",
+            original_name: "Phil Hendrie",
+            popularity: 0.678,
+            profile_path: "/yVEa7Z3AXlTY4Aob2nsDH7I1u4r.jpg"
+            },
+            {
+            character: "Mr. Goldenfold (voice)",
+            credit_id: "5bdc0f4b925141783a0081ca",
+            order: 208,
+            adult: false,
+            gender: 2,
+            id: 167411,
+            known_for_department: "Acting",
+            name: "Brandon Johnson",
+            original_name: "Brandon Johnson",
+            popularity: 1.4,
+            profile_path: "/4hPvsVP7uDBHDgj7JikIY3Wop18.jpg"
+            }
+        ],
+        name: "Pilot",
+        overview: "Rick moves in with his daughter's family and establishes himself as a bad influence on his grandson, Morty.",
+        id: 973400,
+        production_code: "RAM100",
+        season_number: 1,
+        still_path: "/oWaKdUeMOlVZem3v9DWsdDGlTuY.jpg",
+        vote_average: 6.79,
+        vote_count: 119
+        }
+    ```
+
 
 ## App Design.
 
 ### Component catalogue.
-
-....... Insert a screenshot from the Storybook UI showing your component catalogue. [For the Movies app, hi-light stories relating to new/modified components - see the example screenshot below] .......
-
-![][stories]
+![Components](./readmeimages/components.png)
 
 ### UI Design.
 
-...... Insert screenshots of the app's views, with appropriate captions (see example below). (For the Movies Fan App, only show the new/modified views) ........
+![Components](./readmeimages/tvlist.png)
+>Shows a list of Tv Shows.
 
-![][view]
->Shows detailed information on a movie. Clicking the 'Reviews' floating action button will display extracts from critic reviews.
+![Components](./readmeimages/tvdetails.png)
+>Shows detailed information of a tv show.
+
+![Components](./readmeimages/tvseason.png)
+>Shows a list of seasons and episodes of a tv show.
+
+![Components](./readmeimages/episode.png)
+>Shows an overview of an episode as well as stills from that episode.
 
 ### Routing.
 
-...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. [For the Movies Fan app, only new routes should be listed.] ......... 
++ GET /shows/popular - displays popular shows
++ GET /shows/:id/:number/:episode - displays details of a given episode of a tv show
++ GET /shows/:id/:number - displays details of a given season of a tv show
++ GET /shows/:id - displays details of a given tv show
 
-+ GET /blogs - displays all published blogs.
-+ POST /blogs (protected) - add a new blog.
-+ GET /blogs/:id - displays a particular blog.
-+ GET /blogs/:id/comments (protected) - detail view of a particular blog and its comments.
-+ etc.
-+ etc.
+## Independent learning.
 
-## Independent learning (If relevant).
-
-....... Briefly state any technologies/techniques used in your project codebase that was not covered in the lectures/labs. Provide source code filename (source code excerpts are not required in most cases) references to support your assertions and include references (articles/blogs) ......... 
-
-
-[model]: ./data.jpg
-[view]: ./view.png
-[stories]: ./storybook.png
+In this project I learned about tables in Material UI
+- https://material-ui.com/components/tables/
