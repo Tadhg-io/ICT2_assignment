@@ -27,7 +27,7 @@ const StyledTableCell = withStyles((theme) => ({
   },
 }))(TableCell);
 
-const EpisodeList = ( {episodes, action }) => {
+const EpisodeList = ( {episodes, tvShow, action }) => {
 
   
   const classes = useStyles();
@@ -35,7 +35,9 @@ const EpisodeList = ( {episodes, action }) => {
   let episodeRows = episodes.map((e) => (
       <TableRow key={e.id}>
         <TableCell component="th" scope="row">
-          {e.name}
+          <a href={`/shows/${tvShow.id}/${e.season_number}/${e.episode_number}`} >
+            {e.name}
+          </a>
         </TableCell>
         <TableCell align="right">
           {e.air_date}

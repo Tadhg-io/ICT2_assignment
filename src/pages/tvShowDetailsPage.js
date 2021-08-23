@@ -10,7 +10,7 @@ import EpisodeList from "../components/episodeList";
 import Grid from "@material-ui/core/Grid";
 
 
-const MovieDetailsPage = (props) => {
+const TvShowDetailsPage = (props) => {
   const { id, number } = props.match.params
 
   // get tvshow details
@@ -50,7 +50,7 @@ const MovieDetailsPage = (props) => {
                   ( 
                     <>
                     <h1>Season {number}</h1>
-                    <EpisodeList episodes={season.episodes} />
+                    <EpisodeList episodes={season.episodes} tvShow={tvShow} />
                     </>
                   ) 
                   : 
@@ -67,4 +67,4 @@ const MovieDetailsPage = (props) => {
   );
 };
 
-export default withRouter(MovieDetailsPage);
+export default withRouter(TvShowDetailsPage);
