@@ -21,9 +21,9 @@ To use this app, register an API key at TMDB () and place the key in a .env file
 ......[For the Movies Fan app] Specify the additional TMDB endpoints used and show sample responses, in JSON .........
 
  + Tv Shows
-    Endpoint:
-        https://api.themoviedb.org/3/tv/{tv_id}
-    Sample Response:
+Endpoint:
+    https://api.themoviedb.org/3/tv/{tv_id}
+Sample Response:
         ```
         {
             "backdrop_path": "/suopoADq0k8YZr4dQXcU6pToj6s.jpg",
