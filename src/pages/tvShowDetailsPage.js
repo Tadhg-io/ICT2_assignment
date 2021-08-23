@@ -37,7 +37,7 @@ const TvShowDetailsPage = (props) => {
 
   return (
     <>
-      {tvShow ? ( // only render if a show was retrieved
+      {tvShow && !seasonisLoading? ( // only render if a show was retrieved
         <>
           <PageTemplate tvShow={tvShow}>
             <TvShowDetails tvShow={tvShow} />

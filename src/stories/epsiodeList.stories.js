@@ -1,6 +1,6 @@
 import React from "react";
 import EpisodeList from "../components/episodeList";
-import { SampleEpisode, SampleSeason } from "./sampleData";
+import { SampleTvShow, SampleSeason } from "./sampleData";
 import { MemoryRouter } from "react-router";
 import { action } from "@storybook/addon-actions";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
@@ -17,19 +17,12 @@ export default {
 };
 
 export const Basic = () => {
-  // const episodes = [
-  //   { ...SampleEpisode, id: 1 },
-  //   { ...SampleEpisode, id: 2 },
-  //   { ...SampleEpisode, id: 3 },
-  //   { ...SampleEpisode, id: 4 },
-  //   { ...SampleEpisode, id: 5 },
-  // ];
   const episodes = SampleSeason.episodes;
   return (
     <Grid container spacing={5}>
       <EpisodeList
         episodes={episodes}
-        action={(movie) => <AddToFavoritesIcon movie={movie} />}
+        tvShow={SampleTvShow}
       />
     </Grid>
   );
